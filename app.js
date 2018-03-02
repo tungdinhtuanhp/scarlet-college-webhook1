@@ -53,7 +53,7 @@ app.post('/webhook', (req, res) => {
 app.get('/webhook', (req, res) => {
   
   /** UPDATE YOUR VERIFY TOKEN **/
-  const VERIFY_TOKEN = "<YOUR_VERIFY_TOKEN>";
+  const VERIFY_TOKEN = "bkhitech";
   
   // Parse params from the webhook verification request
   let mode = req.query['hub.mode'];
@@ -75,4 +75,12 @@ app.get('/webhook', (req, res) => {
       res.sendStatus(403);      
     }
   }
+});
+
+
+// request gioi-thieu.html
+app.get('/gioi-thieu.html', (req, res) => {
+   
+      res.status(200).send("Nội dung giới thiệu!");
+       
 });
